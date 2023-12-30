@@ -6,7 +6,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="w-64">
                 <SideNav />
             </div>
-            <div className="w-full">
+            <div className="w-full m-5">
                 {children}
             </div>
         </div>

@@ -64,8 +64,8 @@ async function seedUsers(client) {
       const insertedProjects = await Promise.all(
         projects.map(
           (project) => client.sql`
-          INSERT INTO projects (name)
-          VALUES (${project.customer_id}, ${project.name})
+          INSERT INTO projects (id, customer_id, name)
+          VALUES (${project.id}, ${project.customer_id}, ${project.name})
           ON CONFLICT (id) DO NOTHING;
         `,
         ),
@@ -102,7 +102,7 @@ async function seedUsers(client) {
       const insertedTasks = await Promise.all(
         tasks.map(
           (task) => client.sql`
-          INSERT INTO tasks (name)
+          INSERT INTO tasks (project_id, name)
           VALUES (${task.project_id}, ${task.name})
           ON CONFLICT (id) DO NOTHING;
         `,
