@@ -20,7 +20,7 @@ export default function Page() {
           <button className="w-full bg-blue-500 rounded text-white py-2 px-4 hover:bg-blue-600" type="submit">Login</button>
 
         </form>
-        <p className="text-center mt-4">Don't have an account? <Link href="/dashboard">Sign Up</Link></p>
+        <p className="text-center mt-4">Don`t have an account? <Link href="/dashboard">Sign Up</Link></p>
       </div>
     </div>
   )
